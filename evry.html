@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sunhead's Servant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: #0c0e13;
+      color: #f0f0f5;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background: #11131a;
+      padding: 1rem 2rem;
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      border-bottom: 1px solid #1d1f29;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #dcdcff;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 8px #6d78ff;
+    }
+
+    header {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: linear-gradient(135deg, #ff9ad5, #6d78ff);
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 900;
+      color: #ffffff;
+      text-shadow: 0 0 12px rgba(255,200,230,0.7);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #ffc9f0;
+      text-shadow: 0 0 8px rgba(255,180,230,0.5);
+    }
+
+    h3 {
+      color: #ffb3e6;
+      margin-top: 1.5rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    .card {
+      background: #161922;
+      border-radius: 22px;
+      padding: 1.8rem;
+      margin-bottom: 2rem;
+      border: 1px solid #232634;
+      box-shadow: 0 0 25px rgba(0,0,0,0.35);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 35px rgba(255,154,213,0.25);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 1rem 1.8rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff9ad5, #6d78ff);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s;
+      box-shadow: 0 0 15px rgba(255,154,213,0.5);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(255,154,213,0.8);
+    }
+
+    code {
+      background: #10121a;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-family: monospace;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#commands">Commands</a>
+    <a href="#roblox">Roblox Linking</a>
+    <a href="#terms">Terms of Service</a>
+  </nav>
+
+  <header id="home">
+    <h1>Sunhead's Servant</h1>
+    <p>Your cute, cozy, dark‑themed Discord helper.</p>
+  </header>
+
+  <main>
+
+    <section class="card">
+      <h2>About the Bot</h2>
+      <p>
+        Sunhead's Servant is a sweet but powerful Discord moderation and utility bot. 
+        It keeps your server safe, organized, and even connects to your Roblox game.
+      </p>
+      <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1480007153858379796&permissions=8&scope=bot" target="_blank">
+        Invite to Discord
+      </a>
+    </section>
+
+    <section class="card" id="commands">
+      <h2>Commands</h2>
+
+      <h3>Role Commands</h3>
+      <p><code>!createrole &lt;name&gt;</code> — Creates a new role.</p>
+      <p><code>!deleterole &lt;name&gt;</code> — Deletes a role.</p>
+      <p><code>!giverole @user &lt;role&gt;</code> — Gives a role to a user.</p>
+      <p><code>!removerole @user &lt;role&gt;</code> — Removes a role from a user.</p>
+
+      <h3>Utility Commands</h3>
+      <p><code>!write #channel message</code> — Sends a message as the bot.</p>
+      <p><code>!ping</code> — Checks bot latency.</p>
+
+      <h3>Roblox Linking</h3>
+      <p><code>!link &lt;game-url&gt;</code> — Links your Roblox game to the bot.</p>
+    </section>
+
+    <section class="card" id="roblox">
+      <h2>Roblox Linking Tutorial</h2>
+
+      <h3>Step 1 — Use the Link Command</h3>
+      <p>In your Discord server, type:</p>
+      <p><code>!link &lt;your-game-api-url&gt;</code></p>
+
+      <h3>Step 2 — Add the API to Your Roblox Game</h3>
+      <p>Inside your Roblox game, create a script that sends data to the URL you linked. This allows your game to communicate with the bot.</p>
+
+      <h3>Step 3 — Test the Connection</h3>
+      <p>Trigger an event in your Roblox game and check if the bot responds.</p>
+    </section>
+
+    <section class="card" id="terms">
+      <h2>Terms of Service</h2>
+
+      <h3>Introduction</h3>
+      <p>These Terms of Service govern your use of the Sunhead's Servant Discord bot. By using the bot, you agree to comply with these terms.</p>
+
+      <h3>Acceptance of Terms</h3>
+      <p>By accessing or using the bot, you accept these Terms. If you do not agree, please refrain from using the bot.</p>
+
+      <h3>User Responsibilities</h3>
+      <p>You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account. You agree to use the bot only for lawful purposes and in accordance with these Terms.</p>
+
+      <h3>Intellectual Property Rights</h3>
+      <p>All content, features, and functionality of the bot are the exclusive property of Sunhead and its licensors. You may not reproduce, distribute, or create derivative works without explicit permission.</p>
+
+      <h3>Limitations of Liability</h3>
+      <p>To the fullest extent permitted by law, Sunhead shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the bot or inability to use it.</p>
+
+      <h3>Termination of Access</h3>
+      <p>We reserve the right to suspend or terminate your access to the bot for any reason, including breach of these Terms.</p>
+
+      <h3>Modifications to Terms</h3>
+      <p>Sunhead reserves the right to modify these Terms at any time. Changes will be effective upon posting the revised Terms on this page, and your continued use of the bot after modifications constitutes your acceptance of the new Terms.</p>
+
+      <h3>Governing Law</h3>
+      <p>These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction].</p>
+
+      <h3>Contact Information</h3>
+      <p>If you have any questions about these Terms, please contact us at [Your Contact Information].</p>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Sunhead's Servant · Not affiliated with Discord or Roblox
+  </footer>
+
+</body>
+</html>
